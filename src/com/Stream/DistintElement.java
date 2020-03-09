@@ -2,6 +2,7 @@ package com.Stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -9,9 +10,12 @@ import java.util.stream.Collectors;
  */
 public class DistintElement {
     public static void main(String[] args) {
-        List<Integer> str= Arrays.asList(10,20,30,20,10,40,30,50,50);
+        List<Integer> str = Arrays.asList(10, 20, 30, 20, 10, 40, 30, 50, 50);
 
-        List<Integer> withoutDuplicate=str.stream().distinct().collect(Collectors.toList());
+        Set<Integer> set = str.stream().collect(Collectors.toSet());
+        System.out.println("Printing the set" + set);
+
+        List<Integer> withoutDuplicate = str.stream().distinct().collect(Collectors.toList());
 
         System.out.println(withoutDuplicate);
     }
