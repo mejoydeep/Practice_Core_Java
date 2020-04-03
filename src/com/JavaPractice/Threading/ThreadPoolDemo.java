@@ -37,7 +37,7 @@ class Task implements Runnable{
             }
         }
 
-        System.out.println(name +" Completed");
+        System.out.println(name +" Completed\n");
     }
 }
 public class ThreadPoolDemo {
@@ -51,7 +51,7 @@ public class ThreadPoolDemo {
         Runnable t4=new Task("task 4");
         Runnable t5=new Task("task 5");
 
-        ExecutorService executorService= Executors.newFixedThreadPool(MAX_SIZE);
+        ExecutorService executorService= Executors.newCachedThreadPool();
 
         executorService.execute(t1);
         executorService.execute(t2);
