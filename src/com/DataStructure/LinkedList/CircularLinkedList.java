@@ -1,36 +1,12 @@
-package com.DataStructure;
+package com.DataStructure.LinkedList;
 
-class LinkedList{
-    private int data;
-    private LinkedList next;
-
-    public LinkedList(int data) {
-        this.data = data;
-    }
-
-    public int getData() {
-        return data;
-    }
-
-    public void setData(int data) {
-        this.data = data;
-    }
-
-    public LinkedList getNext() {
-        return next;
-    }
-
-    public void setNext(LinkedList next) {
-        this.next = next;
-    }
-}
 
 public class CircularLinkedList {
-    public LinkedList tail;
+    public LinkedListPojo tail;
     public int length;
 
     public void insertAtBegininhg(int data){
-        LinkedList temp=new LinkedList(data);
+        LinkedListPojo temp=new LinkedListPojo(data);
 
         if (tail !=null){
             temp.setNext(tail.getNext());
@@ -49,7 +25,7 @@ public class CircularLinkedList {
     }
 
     public void removeFromBegining(){
-        LinkedList temp=tail.getNext();
+        LinkedListPojo temp=tail.getNext();
         if(tail==tail.getNext()){
             tail=null;
         }
@@ -63,7 +39,7 @@ public class CircularLinkedList {
 
     public void removeFromEnd(){
 
-        LinkedList finger=tail;
+        LinkedListPojo finger=tail;
         while (finger.getNext() !=tail){
            finger=finger.getNext();
         }
@@ -84,7 +60,7 @@ public class CircularLinkedList {
             System.out.println(tail.getData());
         }
         else {
-            LinkedList temp=tail.getNext();
+            LinkedListPojo temp=tail.getNext();
             while (temp!=tail){
                 System.out.print(temp.getData() +" ");
                 temp=temp.getNext();

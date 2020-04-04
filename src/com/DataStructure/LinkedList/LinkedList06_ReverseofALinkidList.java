@@ -1,4 +1,4 @@
-package com.DataStructure;
+package com.DataStructure.LinkedList;
 
 /**
  * Created by JC52036 on 27-01-2020.

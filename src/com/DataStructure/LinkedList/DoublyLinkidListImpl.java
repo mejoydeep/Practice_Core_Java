@@ -1,4 +1,4 @@
-package com.DataStructure;
+package com.DataStructure.LinkedList;
 
 class DoublyLinkedList{
     private int data;
