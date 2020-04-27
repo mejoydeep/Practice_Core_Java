@@ -12,6 +12,7 @@ public class AbstractCollection {
         obj1.add("4");
         obj1.add("Sai");
         obj1.add("Alam");
+        obj1.add("Abhishek");
 
         java.util.AbstractCollection<Object> obj2= new TreeSet<>();
         obj2.addAll(obj1);
@@ -30,6 +31,9 @@ public class AbstractCollection {
         System.out.println(obj3);
         System.out.println(obj4);
         System.out.println(obj5);
+
+        obj1.remove("4");
+        System.out.println(obj1);
 
 
     }

@@ -7,7 +7,7 @@ import java.util.AbstractCollection;
 /**
  * Created by JC52036 on 20-02-2020.
  */
-public class Collection1 {
+public class Collections_Methods {
     public static void main(String[] args) {
        // List<String> st=new <String>();
         AbstractCollection<String> as1=new ArrayList<>();
@@ -69,7 +69,7 @@ public class Collection1 {
         mylist7.add("quiz");
         mylist7.add("geeksforgeeks");
 
-        System.out.println("Frequency of some element in collection :"+Collections.frequency(mylist7,"code"));
+        System.out.println("Frequency of some element in collection :"+Collections.frequency(mylist7,"Code")); // Case should also be matched
 
         Integer[] ar3={10,30,40,30};
         System.out.println("Frequency of some element in array :"+Collections.frequency(Arrays.asList(ar3),30));
@@ -93,6 +93,7 @@ public class Collection1 {
         System.out.println(Arrays.toString(ar4));
 
         System.out.println();
+
         //singleton method
         Integer[] string={1,2,3,1,2,4,5,6,4,8};
         List list=new ArrayList<>(Arrays.asList(string));
@@ -107,14 +108,40 @@ public class Collection1 {
         mylist9.add(10);
         mylist9.add(50);
         mylist9.add(40);
-        System.out.println(mylist9);
+        System.out.println("Before reverse order :"+mylist9);
 
         Collections.sort(mylist9,Collections.reverseOrder());
-        System.out.println(mylist9);
+        System.out.println("After reverse order"+mylist9);
 
         Integer[] arr={20,30,21,10};
         Arrays.sort(arr,Collections.reverseOrder());
         System.out.println(Arrays.toString(arr));
+
+        //Shuffle methods
+        System.out.println();
+
+        List<String> myList10=new ArrayList<String>(Arrays.asList("Joy","Toy","Boy","Roy"));
+
+        System.out.println("Before shuffle : "+myList10);
+
+       // Collections.shuffle(myList10);
+        Collections.shuffle(myList10,new Random());
+
+        System.out.println("After shuffle : "+myList10);
+
+        //Swapping elements of the list
+        System.out.println();
+
+        List<String> myList11=new ArrayList<>(myList10);
+
+        System.out.println("Before swapping :"+myList11);
+
+        Collections.swap(myList11,1,3);
+        System.out.println("After swapping :"+myList11);
+
+
+
+
 
 
 

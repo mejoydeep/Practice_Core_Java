@@ -57,13 +57,13 @@ public class Iterators {
         System.out.println("Displaying list elements in forward direction :");
         while (listIterator.hasNext()){
             int i=(Integer) listIterator.next();
-            System.out.print(i+" ");
+            System.out.print(" index "+listIterator.nextIndex()+" : "+i+"\t-> ");
         }
 
         System.out.println("\nDisplaying list elements in backward direction :");
         while (listIterator.hasPrevious()){
             int j=(Integer)listIterator.previous();
-            System.out.print(j+" ");
+            System.out.print(" index "+listIterator.previousIndex()+" : "+j+"\t-> ");
         }
     }
 }
