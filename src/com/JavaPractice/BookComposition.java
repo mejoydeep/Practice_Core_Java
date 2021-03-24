@@ -31,7 +31,7 @@ class MainClass{
     public static void main(String[] args) {
         BookComposition b1=new BookComposition("Physics","S.N.Dey");
         BookComposition b2=new BookComposition("Chemistry","P.K.Das");
-        BookComposition b3=new BookComposition("Math","K.C.nag");
+        BookComposition b3=new BookComposition("Math","K.C.Nag");
 
         List<BookComposition> books=new ArrayList<>();
         books.add(b1);
